@@ -20,7 +20,7 @@ export const GlobalContext = createContext(initialState);
 
 // Provider Component
 
-export const GlobalProvider = (children) => {
+export const GlobalProvider = ({children}) => {
     const [state, dispatch] = useReducer(AppReducer, initialState);
 
     return (<GlobalContext.Provider value={{
